@@ -42,7 +42,7 @@ function Main() {
           {currentPage + 1}
         </button>
       </div>
-      <div className="grid gap-6 place-items-center md:grid-cols-2  md:w-[85%] lg:grid-cols-3 xl:grid-cols-4">
+      <div className="grid gap-6 place-items-center md:grid-cols-2  md:w-[85%] lg:grid-cols-3 lg:gap-x-12 lg:w-[95%] xl:grid-cols-4 ">
         {charactersList.map((persona) => (
           <div key={persona.id} className="bg-white p-6 text-center grid gap-4 rounded-3xl h-[100%] max-sm:w-[90%]">
             <img src={persona.image} alt="logo" className="w-[480px]"/>
