@@ -44,20 +44,20 @@ function Main() {
       </div>
       <div className="grid gap-6 place-items-center md:grid-cols-2  md:w-[85%] lg:grid-cols-3 lg:gap-x-12 lg:w-[95%] xl:grid-cols-4 ">
         {charactersList.map((persona) => (
-          <div key={persona.id} className="bg-white p-6 text-center grid gap-4 rounded-3xl h-[100%] max-sm:w-[90%]">
-            <img src={persona.image} alt="logo" className="w-[480px]"/>
-            <h1 className="text-4xl font-bold"> {persona.name}</h1>
+          <div key={persona.id} className="bg-white p-6 text-center grid gap-4 rounded-3xl h-[100%] max-sm:w-[90%] place-items-center">
+            <img src={persona.image} alt="logo" className="w-[480px] grid place-items-center"/>
+            <h1 className="text-2xl md:text-4xl font-bold"> {persona.name}</h1>
 
             <div className="flex justify-center gap-3 items-center">
-              <p className="text-2xl font-bold text-black/40">Status :</p>
+              <p className="text-xl md:text-2xl font-bold text-black/40">Status :</p>
               <div  className={persona.status === "Alive" ? "bg-green-500 w-5 h-5 rounded-full":"bg-red-600 w-5 h-5 rounded-full"}>
 
               </div>
-              <p className="text-3xl font-bold ">{persona.status}</p>
+              <p className="text-xl md:text-3xl font-bold ">{persona.status}</p>
             </div>
             <div className="flex gap-3 justify-center">
-            <p className="text-2xl font-bold text-black/40">Species :</p>
-            <p className="text-3xl font-bold">{persona.species}</p>
+            <p className=" text-xl md:text-2xl font-bold text-black/40">Species :</p>
+            <p className="text-xl md:text-3xl font-bold">{persona.species}</p>
           </div>
           </div>
         ))}
